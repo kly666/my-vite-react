@@ -1,0 +1,1 @@
+export const defaultError = parseFloat('3.1')

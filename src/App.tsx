@@ -1,9 +1,23 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+// import { defaultError } from '@/utils/error.js'
+// import { MyEnum } from '@/utils/index.d'
 
 function App() {
   const [count, setCount] = useState(0)
+  // console.log(MyEnum, 'MyEnum')
+  let a = 1
+  switch (a) {
+    case 1:
+      console.log(1)
+      break
+    case 2:
+      console.log(2)
+      break
+    default:
+      console.log('default')
+  }
 
   return (
     <div className="App">
