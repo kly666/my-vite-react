@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
-    "baseUrl": "./", // 解析非绝对路径模块名时的基准目录
+    "baseUrl": ".", // 解析非绝对路径模块名时的基准目录
     // baseUrl 必须设置，paths用来声明 TypeScript 应该如何解析 require/import
     "paths": {
+      "@":["./src"],
       "@/*": ["src/*"], // 如 import xx from '@/xxx' 说明从src目录下导入对应的模块
-      "utils/*": ["src/utils/*"]
+      // "utils/*": ["src/utils/*"]
     }
   }
 }

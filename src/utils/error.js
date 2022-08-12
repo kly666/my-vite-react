@@ -1,1 +1,1 @@
-export const defaultError = parseFloat('3.1')
+const defaultError = parseFloat('3.1')

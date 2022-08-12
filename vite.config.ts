@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import { resolve } from "path";
 import react from "@vitejs/plugin-react";
 import legacy from "@vitejs/plugin-legacy";
 
@@ -31,14 +32,14 @@ export default defineConfig({
     }),
   ],
   resolve: {
-    alias: {
-      // "@/*": `${__dirname}`
-    }
+    alias: [
+      { find: '@', replacement: resolve(__dirname, 'src') }
+    ]
   },
   server: {
     port: 8000
   },
   build: {
-    target: "es2015",
+    target: "ES2015",
   },
 });
