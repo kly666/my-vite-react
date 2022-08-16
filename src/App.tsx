@@ -1,6 +1,7 @@
 import { Card, Button, Popover } from 'antd'
+import './App.css'
 
-const App = (props: any) => {
+const App = () => {
   document.title = '子页面换肤';
   const { a, b, c = 3 } = {a: 1, b: 2}
   return (
