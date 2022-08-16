@@ -1,48 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-// import { defaultError } from ''
+import { Card, Button, Popover } from 'antd'
 
-function App() {
-  const [count, setCount] = useState(0)
-  // console.log(MyEnum, 'MyEnum')
-  let a = 1
-  switch (a) {
-    case 1:
-      console.log(1)
-      break
-    case 2:
-      console.log(2)
-      break
-    default:
-      console.log('default')
-  }
-
+const App = (props: any) => {
+  document.title = '子页面换肤';
+  const { a, b, c = 3 } = {a: 1, b: 2}
   return (
-    <div className="App">
-      {false}11
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div className="pageColorChange">
+      <h1 className="fontColor">换肤子页面</h1>
+      <Card>
+        <div>
+          <span style={{ marginRight: 20 }}>测试按钮</span>
+          <Button type="primary">测试按钮</Button>
+        </div>
+      </Card>
+      <Card style={{ marginTop: 20 }}>
+        <Popover title="测试气泡">
+          <span style={{ marginRight: 20 }} className="fontColor">
+            测试气泡
+          </span>
+          {
+            a > 0 ? a < 9 ? '0<a<9' : 'a>=9' : 'a<=0'
+          }
+        </Popover>
+      </Card>
     </div>
-  )
-}
+  );
+};
 
 export default App

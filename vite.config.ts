@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 import react from "@vitejs/plugin-react";
 import legacy from "@vitejs/plugin-legacy";
+import qiankun from 'vite-plugin-qiankun';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -30,6 +31,7 @@ export default defineConfig({
         "esnext.string.match-all",
       ],
     }),
+    qiankun('sub-root', { useDevMode: true })
   ],
   resolve: {
     alias: [
@@ -37,7 +39,7 @@ export default defineConfig({
     ]
   },
   server: {
-    port: 8000
+    port: 3002
   },
   build: {
     target: "ES2015",
