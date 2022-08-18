@@ -19,8 +19,10 @@ export default defineConfig({
     preprocessorOptions: {
       less: {
         modifyVars: {
-          '@primary-color': 'var(--primary-color)'
+          '@primary-color': 'var(--test-color)'
         },
+        // customizeThemeLessPath: resolve(__dirname, 'src/themes.less'),
+        // modifyVars: resolve(__dirname, 'src/themes.less'),
         javascriptEnabled: true
       }
     }

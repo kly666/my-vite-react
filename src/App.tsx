@@ -4,6 +4,7 @@ import './App.css'
 const App = () => {
   document.title = '子页面换肤';
   const { a, b, c = 3 } = {a: 1, b: 2}
+
   return (
     <div className="pageColorChange">
       <h1 className="fontColor">换肤子页面</h1>
