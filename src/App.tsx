@@ -1,4 +1,4 @@
-import { Card, Button, Popover } from 'antd'
+import { Card, Button, Radio, Alert } from 'antd'
 import './App.css'
 
 const App = () => {
@@ -15,14 +15,7 @@ const App = () => {
         </div>
       </Card>
       <Card style={{ marginTop: 20 }}>
-        <Popover title="测试气泡">
-          <span style={{ marginRight: 20 }} className="fontColor">
-            测试气泡
-          </span>
-          {
-            a > 0 ? a < 9 ? '0<a<9' : 'a>=9' : 'a<=0'
-          }
-        </Popover>
+        <Radio>单选测试</Radio>
       </Card>
     </div>
   );

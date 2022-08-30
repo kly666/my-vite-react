@@ -1,11 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { ConfigProvider } from 'antd'
 import App from './App'
+import './index.css'
 import 'antd/dist/antd.variable.less'
+// import 'antd/dist/antd.less'
 
 // vite-plugin-qiankun helper
 import { renderWithQiankun, qiankunWindow } from 'vite-plugin-qiankun/dist/helper';
 
+
+// ConfigProvider.config({
+//   theme: {
+//     primaryColor: 'var(--test-color)',
+//   },
+// });
 function render(props: any) {
   const { container } = props;
   ReactDOM.render(
