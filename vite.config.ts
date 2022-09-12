@@ -3,7 +3,6 @@ import { resolve } from "path";
 import react from "@vitejs/plugin-react";
 import { Plugin } from 'rollup';
 import legacy from "@vitejs/plugin-legacy";
-// import { getBabelOutputPlugin } from '@rollup/plugin-babel';
 import qiankun from 'vite-plugin-qiankun';
 
 // https://vitejs.dev/config/
@@ -25,9 +24,9 @@ export default defineConfig(({command, mode }) => {
     css: {
       preprocessorOptions: {
         less: {
-          modifyVars: {
-            '@primary-color': 'var(--test-color)'
-          },
+          // modifyVars: {
+          //   '@primary-color': 'var(--test-color)'
+          // },
           javascriptEnabled: true
         },
         plugin: {

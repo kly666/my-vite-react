@@ -2,3 +2,9 @@
   width: 1280px;
   margin: 0 auto;
 }
+.primaryTest {
+  /* 方案一 */
+  color: var(--primary-color);
+  /* 方案二 */
+  /* color: var(--ant-primary-color); */
+}
